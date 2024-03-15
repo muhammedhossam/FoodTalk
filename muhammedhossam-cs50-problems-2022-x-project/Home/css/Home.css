@@ -1,0 +1,636 @@
+/* Start varible */
+:root {
+  --main-color: #795548;
+  --secound-color: #fcaf17;
+  --padding-section: 100px;
+}
+/* End Varible */
+/* Start Golable Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0ch;
+  margin: 0;
+}
+
+body {
+  /* font-family: "Merienda One", cursive; */
+  font-family: "Baloo Tamma 2", cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.special-heading {
+  color: var(--secound-color);
+  font-weight: 800;
+  font-size: 100px;
+  text-align: center;
+  letter-spacing: -3px;
+  margin: 0;
+}
+
+.special-heading + p {
+  margin: -30px 0 0;
+  color: var(--main-color);
+  text-align: center;
+  font-size: 20px;
+  opacity: 0.7;
+}
+
+@media (max-width: 767px) {
+  .special-heading {
+    font-size: 60px;
+  }
+
+  .special-heading + p {
+    margin-top: -20px;
+  }
+}
+
+/* End Golable Rules */
+
+/* Start header */
+.poom {
+  background-color: #3f51b5;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn input {
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-right: 10px;
+  transition: 0.09s;
+}
+.btn input:hover {
+  transform: translate(0px, -5px);
+  box-shadow: 5px 4px 0px 0px rgb(6 4 0);
+}
+header {
+  background-image: url(../image/sukhis-bg-hi-res.png);
+}
+header .container {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(50%, 1fr)); */
+  grid-template-areas: "io io li li li li li li";
+}
+header .container .logo {
+  align-self: center;
+  font-size: 50px;
+  grid-area: io;
+  padding: 10px 30px;
+}
+
+header .container .logo a {
+  color: var(--main-color);
+  text-decoration: none;
+  font-family: "Merienda One", cursive;
+}
+
+header .container nav {
+  grid-area: li;
+  justify-self: flex-end;
+  align-self: center;
+  background-image: url(../image/paper.gif);
+  border-radius: 10px;
+  outline: 2px solid black;
+}
+header .container nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+header .container nav li {
+  display: inline-block;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 6px;
+  font-size: 14px;
+  /* margin-right: 10px; */
+  transition: 0.3s;
+}
+header .container nav li:hover {
+  background-color: #4caf50;
+}
+header .container nav a {
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--main-color);
+  transition: 0.3s;
+  position: relative;
+  padding: 2px 0;
+}
+
+header .container nav li:hover a {
+  color: white;
+}
+/* End header */
+
+/* Start landing */
+.landing {
+  height: calc(100vh - 143.4px);
+  background-image: url(../image/pizza-ingredients-on-black-table-754244.jpg);
+  background-position-y: -285px;
+  position: relative;
+}
+.landing .intro-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.landing .intro-text h1 {
+  margin: 0;
+  font-size: 50px;
+  color: var(--secound-color);
+  text-align: center;
+}
+.landing .intro-text q {
+  color: var(--secound-color);
+}
+/* End landing */
+/* Start featuers */
+.features {
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
+  background-color: #f5f5f5;
+}
+
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+.features .container .iner {
+  align-items: center;
+  padding: 20px;
+  display: flex;
+  position: relative;
+  box-shadow: 0 0 7px 1px #ddd;
+  border-radius: 7px;
+  transition: 0.3s;
+}
+.features .container .iner.iner:hover {
+  transform: translate(-10px, -5px);
+  box-shadow: 5px 6px 8px 0px orange;
+}
+.features .container .iner .font {
+  color: var(--secound-color);
+}
+
+.features .container .iner i {
+  font-size: 35px;
+  margin-right: 25px;
+  margin-bottom: 20px;
+}
+.features .container .iner .text {
+  flex-basis: 1;
+  display: flex;
+  flex-direction: column;
+}
+.features .container .iner h2 {
+  margin-top: 0px;
+  margin-bottom: 0.5rem;
+  font-family: Mallory, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: -0.014em;
+}
+.features .container .iner p {
+  letter-spacing: -0.011em;
+  margin-top: 0px;
+  color: #777;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+/* end featuers */
+/* Start qout */
+.quot {
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
+}
+.quot .container {
+  background-image: url(../image/thatched-hut.webp);
+  background-position-y: -75px;
+  background-size: cover;
+  padding: 70px;
+  text-align: center;
+  color: #5a5a58;
+}
+.quot .container q {
+  font-size: 400%;
+  font-family: "Dancing Script", cursive;
+  font: bold;
+}
+/* End qout */
+/* Start Servisec */
+.servises {
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
+  background-image: url(../image/paper.gif);
+}
+
+.servises .serves {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+.servises .container .image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.servises .container .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+.servises .container img:hover {
+  transform: rotate(4deg) scale(1.2);
+}
+.servises .container .text {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: var(--secound-color);
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.servises .container .text h3 {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  padding: 20px;
+}
+.servises .container .text p {
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  font-size: 20px;
+  color: #777;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+/* End Servisec */
+/* Start Contact */
+.contact {
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
+}
+
+.contact .contact-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+}
+
+.contact .contact-content p {
+  font-size: 30px;
+  font-weight: bolder;
+  margin: 20px auto 10px;
+}
+.contact .contact-content a {
+  text-decoration: none;
+  color: var(--secound-color);
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 10px auto 10px;
+}
+.contact .contact-content .btn a {
+  letter-spacing: 1;
+  text-align: center;
+}
+.contact .contact-content .btn button {
+  background-color: transparent;
+  border: 1px solid var(--secound-color);
+  border-radius: 30px;
+  padding: 10px;
+  text-align: center;
+  max-width: 100%;
+  margin: 0 0 10px;
+}
+.contact .contact-content .btn button:hover {
+  background-color: var(--secound-color);
+}
+
+.contact .contact-content .btn button:hover a {
+  color: var(--main-color);
+}
+/* End Contact */
+/* footer */
+footer {
+  background-color: #2c4755;
+  color: white;
+  padding: 30px 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+footer span {
+  color: var(--secound-color);
+  font-weight: bold;
+  font-size: 40px;
+  font-family: "Dancing Script", cursive;
+}
+/* footer */
+
+/* 
+header {
+  background-color: #f0f0f0;
+  background-image: url(../image/sukhis-bg-hi-res.png);
+  padding: 20px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .container .logo a {
+  text-decoration: none;
+  color: var(--main-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.8em;
+}
+header .container nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+header .container nav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+header .container nav li {
+  padding: 40px 10px;
+  margin-left: 25px;
+}
+
+header .container nav li a {
+  text-decoration: none;
+  display: block;
+  color: var(--main-color);
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+header .container nav li a:hover {
+  color: black;
+  transform: translate(2px, 4px);
+}
+@media (max-width: 995px) {
+  header .container nav li {
+    display: none;
+  }
+}
+
+header .container nav span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+header .container nav input {
+  padding: 14px 6px;
+  width: 120px;
+  margin-right: 20px;
+  background-color: white;
+  border-radius: 30px;
+  border: 1px;
+  color: var(--main-color);
+}
+header .container nav input:hover {
+  color: white;
+  background-color: #4b5d75;
+} */
+
+/* header {
+  background-color: black;
+}
+header .container {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+header .container .logo {
+  align-self: center;
+  font-size: 50px;
+  justify-self: center;
+  width: 100%;
+  background-image: url(../image/sukhis-bg-hi-res.png);
+  background-size: cover;
+}
+
+header .container .logo a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+header .container nav {
+}
+header .container nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+header .container nav li {
+  display: inline-block;
+}
+header .container nav a {
+} */
+
+/* Statr top bottom */
+.top-bottom {
+  font-size: 40px;
+  bottom: 0;
+  right: 0;
+  margin-right: 20px;
+  z-index: 2;
+  position: fixed;
+  cursor: pointer;
+  /* display: none; */
+}
+.top-bottom i {
+  color: var(--secound-color);
+}
+/* End top bottom */
+
+/* Start add section */
+
+.add-photo {
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
+  background-color: #ddd;
+}
+
+.add-photo .result {
+  text-align: center;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.add-photo .result .box {
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #777;
+  border-radius: 6px;
+  width: calc((100% - 40px) / 3);
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+/* End add section */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  /* padding-top: var(--padding-section); */
+  padding-bottom: var(--padding-section);
+  background: black;
+  height: calc(100vh - 56.09px);
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.slideshow-container .text {
+  color: white;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
